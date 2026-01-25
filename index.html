@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sharedrobe | Louez le luxe</title>
+
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+
+<header>
+    <h1>SHAREDROBE</h1>
+    <nav>
+        <a href="#home">Accueil</a>
+		<a href="shop.html">Boutique</a>
+        <a href="#how">Comment ça marche</a>
+        <a href="#about">À propos</a>
+        <a href="#contact">Contact</a>
+        <div class="mini-cart">
+        🛒 <span id="cart-count">0</span>
+        <div class="cart-dropdown" id="cart-dropdown">
+            <ul id="mini-cart-items"></ul>
+            <a href="cart.html" class="go-to-cart">Voir le panier</a>
+        </div>
+    </div>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <h2>Louez le luxe pour vos moments inoubliables</h2>
+    <p>Vêtements et accessoires de luxe pour mariages, soirées et événements spéciaux.</p>
+    <button onclick="window.location.href='shop.html'">Explorer la collection</button>
+</section>
+
+<section id="how">
+    <h3>Comment ça marche</h3>
+    <div class="steps">
+        <div class="step">1. Choisissez votre tenue</div>
+        <div class="step">2. Réservez vos dates</div>
+        <div class="step">3. Profitez de l’événement</div>
+        <div class="step">4. Retour facile</div>
+    </div>
+</section>
+
+<section id="about">
+    <h3>À propos de Sharedrobe</h3>
+    <p class="center-text">
+        Sharedrobe est une plateforme de location de vêtements et accessoires de luxe,
+        permettant d’accéder à l’élégance sans achat excessif.
+    </p>
+</section>
+
+<section id="contact">
+    <h3>Contact / Réservation</h3>
+    <form onsubmit="return validateForm()">
+        <input type="text" id="name" placeholder="Nom">
+        <input type="email" id="email" placeholder="Email">
+        <select id="occasion">
+            <option value="">Occasion</option>
+            <option>Mariage</option>
+            <option>Soirée</option>
+            <option>Prom / Bal</option>
+        </select>
+        <textarea id="message" placeholder="Votre message"></textarea>
+        <button type="submit">Envoyer</button>
+    </form>
+</section>
+
+<footer>
+    © 2026 Sharedrobe — Tous droits réservés
+</footer>
+
+<script src="./script.js"></script>
+</body>
+</html>

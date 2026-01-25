@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sharedrobe | Boutique</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1>SHAREDROBE</h1>
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="shop.html">Boutique</a>
+        <a href="index.html#how">Comment ça marche</a>
+        <a href="index.html#about">À propos</a>
+        <a href="index.html#contact">Contact</a>
+        <div class="mini-cart">
+        🛒 <span id="cart-count">0</span>
+        <div class="cart-dropdown" id="cart-dropdown">
+            <ul id="mini-cart-items"></ul>
+            <a href="cart.html" class="go-to-cart">Voir le panier</a>
+        </div>
+    </div>
+    </nav>
+</header>
+
+<section class="shop-hero">
+    <h2>Notre Collection de Robes et Accessoires</h2>
+    <p>Découvrez nos vêtements et accessoires de luxe pour tous vos événements.</p>
+</section>
+
+<section id="shop-options">
+    <div class="filters">
+        <button onclick="filterProducts('all')">Tous</button>
+        <button onclick="filterProducts('robe')">Robes</button>
+        <button onclick="filterProducts('accessoire')">Accessoires</button>
+    </div>
+
+    <div class="products">
+        <div class="product robe">
+            <img src="assets/white-dress.jpeg" alt="Robe de soirée élégante">
+            <h4>Robe de soirée élégante</h4>
+            <p>Location : 80€</p>
+            <p>Occasion : Soirée</p>
+            <button class="add-to-cart" data-name="Robe de soirée élégante" data-price="80">Louer</button>
+        </div>
+
+        <div class="product robe">
+            <img src="assets/burgundydress.jpeg" alt="Robe de mariage chic">
+            <h4>Robe de mariage chic</h4>
+            <p>Location : 120€</p>
+            <p>Occasion : Mariage</p>
+            <button class="add-to-cart" data-name="Robe de mariage chic" data-price="120">Louer</button>
+        </div>
+
+        <div class="product robe">
+            <img src="assets/pink.jpeg" alt="Robe cocktail glamour">
+            <h4>Robe cocktail glamour</h4>
+            <p>Location : 90€</p>
+            <p>Occasion : Cocktail</p>
+            <button class="add-to-cart" data-name="Robe cocktail glamour" data-price="90">Louer</button>
+        </div>
+
+        <div class="product robe">
+            <img src="assets/blackdress.jpeg" alt="Robe de bal">
+            <h4>Robe de bal chic</h4>
+            <p>Location : 100€</p>
+            <p>Occasion : Bal</p>
+            <button class="add-to-cart" data-name="Robe de bal chic" data-price="100">Louer</button>
+        </div>
+
+        <div class="product accessoire">
+            <img src="https://cacheshopping.cosmopolitan.fr/data/photo/w680_ci/70/sac-chanel-matelasse.jpg" alt="Sac de luxe">
+            <h4>Sac de luxe</h4>
+            <p>Location : 50€</p>
+            <p>Occasion : Événement</p>
+            <button class="add-to-cart" data-name="Sac de luxe" data-price="50">Louer</button>
+        </div>
+
+        <div class="product accessoire">
+            <img src="assets/necklace.jpeg" alt="Collier élégant">
+            <h4>Collier élégant</h4>
+            <p>Location : 30€</p>
+            <p>Occasion : Mariage / Soirée</p>
+            <button class="add-to-cart" data-name="Collier élégant" data-price="30">Louer</button>
+        </div>
+
+        <div class="product accessoire">
+            <img src="https://img.drz.lazcdn.com/static/pk/p/8e289a4a094c5ba7fa67055a7e033c4c.jpgstyle=width:1600px;height:2400px;display:inline;vertical-align:middle_960x960q80.jpg_.webp" alt="Chaussures élégantes">
+            <h4>Chaussures élégantes</h4>
+            <p>Location : 40€</p>
+            <p>Occasion : Cocktail / Soirée</p>
+            <button class="add-to-cart" data-name="Chaussures élégantes" data-price="40">Louer</button>
+        </div>
+
+        <div class="product robe">
+            <img src="assets/gold.jpeg" alt="Robe de gala">
+            <h4>Robe de gala</h4>
+            <p>Location : 130€</p>
+            <p>Occasion : Gala / Mariage</p>
+            <button class="add-to-cart" data-name="Robe de gala" data-price="130">Louer</button>
+        </div>
+    </div>
+</section>
+
+<footer>
+    © 2026 Sharedrobe — Tous droits réservés
+</footer>
+
+<script src="./script.js"></script>
+</body>
+</html>
