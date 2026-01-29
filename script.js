@@ -153,6 +153,60 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
     }
+    
+    // ==========================
+// RENTAL DATE SYSTEM
+// ==========================
+
+const checkBtn = document.getElementById("check-availability");
+const confirmBtn = document.getElementById("confirm-rental");
+const messageEl = document.getElementById("availability-message");
+
+// FAKE booked dates (simulation)
+let bookedDates = [
+    { start: "2026-02-10", end: "2026-02-15" },
+    { start: "2026-03-01", end: "2026-03-05" }
+];
+
+function datesOverlap(start1, end1, start2, end2) {
+    return new Date(start1) <= new Date(end2) && new Date(end1) >= new Date(start2);
+}
+
+if (checkBtn) {
+    checkBtn.addEventListener("click", () => {
+        const startDate = document.getElementById("start-date").value;
+        const endDate = document.getElementById("end-date").value;
+
+        if (!startDate || !endDate) {
+            messageEl.innerText = "Veuillez choisir les deux dates.";
+            messageEl.style.color = "red";
+            return;
+        }
+
+        let unavailable = bookedDates.some(booking =>
+            datesOverlap(startDate, endDate, booking.start, booking.end)
+        );
+
+        if (unavailable) {
+            messageEl.innerText = "❌ Certains articles ne sont pas disponibles pour ces dates.";
+            messageEl.style.color = "red";
+            confirmBtn.style.display = "none";
+        } else {
+            messageEl.innerText = "✅ Tous les articles sont disponibles !";
+            messageEl.style.color = "green";
+            confirmBtn.style.display = "inline-block";
+        }
+    });
+}
+
+if (confirmBtn) {
+    confirmBtn.addEventListener("click", () => {
+        alert("Location confirmée ! Merci 💖");
+        localStorage.removeItem("cart"); // vide le panier
+        location.reload();
+    });
+}
+
 
     // Initial render
     renderCart();

@@ -47,7 +47,23 @@
         <div class="cart-summary">
             <h3>Total: <span id="cart-total">0€</span></h3>
             <button id="checkout-btn">Passer à la réservation</button>
-        </div>
+        
+        <div class="rental-section">
+    <h3>Choisissez vos dates de location</h3>
+
+    <label>Date de début :</label>
+    <input type="date" id="start-date">
+
+    <label>Date de fin :</label>
+    <input type="date" id="end-date">
+
+    <button id="check-availability">Vérifier disponibilité</button>
+
+    <p id="availability-message"></p>
+
+    <button id="confirm-rental" style="display:none;">Confirmer la location</button>
+</div>
+
     </div>
 </section>
 
