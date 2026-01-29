@@ -174,7 +174,6 @@ function datesOverlap(start1, end1, start2, end2) {
 
 if (checkBtn) {
     checkBtn.addEventListener("click", function() {
-        alert("CLICK DETECTED");
         const startDate = document.getElementById("start-date").value;
         const endDate = document.getElementById("end-date").value;
 
